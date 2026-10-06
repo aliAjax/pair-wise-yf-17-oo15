@@ -220,3 +220,508 @@ input {
     padding: 24px;
   }
 }
+
+/* ---------- 台账扩展 ---------- */
+.tabs {
+  display: flex;
+  gap: 8px;
+  margin: 18px 0;
+  flex-wrap: wrap;
+}
+
+.tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 16px;
+  border-radius: 999px;
+  background: #ffffff;
+}
+
+.tab-active {
+  background: var(--primary);
+  color: #ffffff;
+  border-color: var(--primary);
+}
+
+.tab-badge {
+  min-width: 20px;
+  height: 20px;
+  padding: 0 6px;
+  border-radius: 999px;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.cert-binding {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+  padding: 10px 14px;
+  border: 1px dashed color-mix(in srgb, var(--accent) 45%, var(--border));
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--accent) 6%, #ffffff);
+  color: #334155;
+  font-size: 13px;
+}
+
+.dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #10b981;
+  flex: none;
+}
+
+.dot-warn {
+  background: #f59e0b;
+}
+
+.form-hint {
+  margin: 14px 0 0;
+  color: #64748b;
+  font-size: 12.5px;
+  line-height: 1.7;
+}
+
+.form-hint-warn {
+  color: #b45309;
+}
+
+.search {
+  max-width: 260px;
+  min-height: 38px;
+}
+
+.chip-on {
+  background: var(--primary) !important;
+  color: #ffffff !important;
+  border-color: var(--primary) !important;
+}
+
+.table-wrap {
+  overflow-x: auto;
+  margin-top: 6px;
+}
+
+.ledger {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13.5px;
+}
+
+.ledger th,
+.ledger td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+.ledger th {
+  color: #64748b;
+  font-weight: 600;
+  background: #f8fafc;
+}
+
+.ledger td.num {
+  font-variant-numeric: tabular-nums;
+}
+
+.row-pending {
+  background: #fffbeb;
+}
+
+.sub {
+  color: #94a3b8;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.badge {
+  display: inline-block;
+  padding: 2px 9px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.6;
+  margin: 1px 4px 1px 0;
+}
+
+.badge-ok {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.badge-out {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.badge-warn {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.badge-info {
+  background: #e0f2fe;
+  color: #0369a1;
+}
+
+.badge-muted {
+  background: #f1f5f9;
+  color: #64748b;
+}
+
+.empty {
+  text-align: center;
+  color: #94a3b8;
+  padding: 28px 0;
+}
+
+.empty-box {
+  padding: 26px;
+  text-align: center;
+  color: #94a3b8;
+  border: 1px dashed var(--border);
+  border-radius: 8px;
+}
+
+/* ---------- 证书 ---------- */
+.cert-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 18px;
+  align-items: start;
+}
+
+.cert-current {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #fbfdff;
+}
+
+.cert-version {
+  font-size: 34px;
+  font-weight: 800;
+  color: var(--primary);
+  line-height: 1;
+}
+
+.cert-current dl {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px 18px;
+  margin: 0;
+  flex: 1;
+}
+
+.cert-current dt {
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+.cert-current dd {
+  margin: 2px 0 0;
+  font-weight: 600;
+}
+
+.sub-heading {
+  margin: 22px 0 10px;
+}
+
+.cert-history {
+  display: grid;
+  gap: 8px;
+}
+
+.cert-row {
+  display: grid;
+  grid-template-columns: 48px 1.4fr 1fr 1fr;
+  gap: 10px;
+  align-items: center;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  font-size: 13px;
+}
+
+.cert-active {
+  border-color: var(--primary);
+  background: color-mix(in srgb, var(--primary) 6%, #ffffff);
+}
+
+.concurrency-note {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: #f8fafc;
+  color: #475569;
+  font-size: 13px;
+}
+
+.link-btn {
+  border: none;
+  background: none;
+  color: var(--accent);
+  text-decoration: underline;
+  min-height: auto;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.conflict-banner {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 14px;
+  padding: 12px 14px;
+  border: 1px solid #fca5a5;
+  border-radius: 8px;
+  background: #fef2f2;
+  color: #991b1b;
+  font-size: 13.5px;
+}
+
+.conflict-banner button {
+  margin-left: auto;
+}
+
+.form-actions {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: flex-end;
+}
+
+.form-actions .primary {
+  width: 100%;
+}
+
+/* ---------- 待核验 ---------- */
+.pending-row {
+  grid-template-columns: 54px 1fr auto;
+}
+
+.pending-index {
+  background: linear-gradient(135deg, #f59e0b, #ef4444) !important;
+}
+
+.pending-body h3 {
+  margin-bottom: 6px;
+}
+
+/* ---------- 报告 ---------- */
+.reports-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.report-row {
+  grid-template-columns: 54px 1fr;
+}
+
+.report-dot {
+  background: linear-gradient(135deg, var(--secondary), var(--accent)) !important;
+}
+
+.dot-review {
+  background: linear-gradient(135deg, #f59e0b, #ef4444) !important;
+}
+
+.report-body h3 {
+  margin-bottom: 6px;
+}
+
+.review-reason {
+  margin: 6px 0;
+  padding: 8px 12px;
+  border-left: 3px solid #f59e0b;
+  background: #fffbeb;
+  color: #92400e;
+  font-size: 13px;
+  border-radius: 0 6px 6px 0;
+}
+
+.report-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.report-actions .badge {
+  margin-right: auto;
+}
+
+/* ---------- 审计 ---------- */
+.audit-list {
+  display: grid;
+  gap: 4px;
+}
+
+.audit-row {
+  display: grid;
+  grid-template-columns: 150px 150px 1fr 120px;
+  gap: 10px;
+  align-items: center;
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--border);
+  font-size: 13px;
+}
+
+.audit-time {
+  color: #64748b;
+  font-variant-numeric: tabular-nums;
+}
+
+.audit-type {
+  justify-self: start;
+}
+
+.audit-msg {
+  color: #334155;
+}
+
+.audit-op {
+  text-align: right;
+}
+
+/* ---------- 弹窗 ---------- */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.45);
+  display: grid;
+  place-items: center;
+  z-index: 50;
+  padding: 20px;
+}
+
+.modal {
+  width: min(860px, 100%);
+  max-height: 86vh;
+  overflow: auto;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 22px;
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.3);
+}
+
+/* ---------- 发件箱 ---------- */
+.outbox-banner {
+  margin-bottom: 14px;
+  padding: 12px 14px;
+  border: 1px solid #fcd34d;
+  border-radius: 8px;
+  background: #fffbeb;
+  color: #78350f;
+  font-size: 13.5px;
+  line-height: 1.7;
+}
+
+.outbox-stats {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+}
+
+.outbox-controls {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #f8fafc;
+  font-size: 13.5px;
+}
+
+.switch {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.switch input {
+  width: auto;
+  min-height: auto;
+}
+
+.fail-mode {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.fail-mode select {
+  min-height: 36px;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  padding: 0 8px;
+  background: #ffffff;
+}
+
+.upload-error {
+  color: #b91c1c;
+  font-size: 12.5px;
+}
+
+/* ---------- Toast ---------- */
+.toast-stack {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  display: grid;
+  gap: 10px;
+  z-index: 100;
+  max-width: 380px;
+}
+
+.toast {
+  padding: 12px 16px;
+  border-radius: 8px;
+  background: #1e293b;
+  color: #ffffff;
+  font-size: 13.5px;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.3);
+}
+
+.toast-success {
+  background: #15803d;
+}
+
+.toast-error {
+  background: #b91c1c;
+}
+
+.toast-info {
+  background: #0369a1;
+}
+
+@media (max-width: 960px) {
+  .cert-grid {
+    grid-template-columns: 1fr;
+  }
+  .audit-row {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+  .audit-op {
+    text-align: left;
+  }
+}
