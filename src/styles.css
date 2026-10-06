@@ -18,7 +18,8 @@ body {
 }
 
 button,
-input {
+input,
+select {
   font: inherit;
 }
 
@@ -165,12 +166,14 @@ label span {
   font-size: 13px;
 }
 
-input {
+input,
+select {
   width: 100%;
   min-height: 42px;
   border-radius: 7px;
   border: 1px solid var(--border);
   padding: 0 12px;
+  background: #ffffff;
 }
 
 .records {
@@ -218,5 +221,398 @@ input {
   .hero {
     min-height: 210px;
     padding: 24px;
+  }
+}
+
+/* ---------- 徽标 ---------- */
+
+.badge {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.7;
+  white-space: nowrap;
+}
+
+.badge.ok {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.badge.warn {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.badge.bad {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.badge.neutral {
+  background: #e2e8f0;
+  color: #334155;
+}
+
+.badge.status-draft {
+  background: #e2e8f0;
+  color: #334155;
+}
+
+.badge.status-issued {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.badge.status-recalled {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.badge.kind-cert {
+  background: #fef3c7;
+  color: #854d0e;
+}
+
+.badge.kind-report {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.badge.kind-reading {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.badge.kind-system {
+  background: #e2e8f0;
+  color: #334155;
+}
+
+.badge.kind-conflict {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* ---------- 横幅 ---------- */
+
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 18px;
+  padding: 16px 20px;
+  border-radius: 8px;
+  border: 1px solid;
+}
+
+.banner.warn {
+  background: #fffbeb;
+  border-color: #f59e0b;
+}
+
+.banner.danger {
+  background: #fef2f2;
+  border-color: #ef4444;
+}
+
+.banner strong {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.banner p {
+  margin: 0;
+  color: #526071;
+  line-height: 1.6;
+}
+
+.banner-actions {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.banner-actions button {
+  padding: 0 14px;
+  white-space: nowrap;
+}
+
+/* ---------- 证书卡片 ---------- */
+
+.mt {
+  margin-top: 22px;
+}
+
+.cert-list {
+  display: grid;
+  gap: 10px;
+}
+
+.cert-card {
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  border-radius: 8px;
+  padding: 12px 14px;
+  background: #fbfdff;
+}
+
+.cert-card.expired {
+  border-left-color: #cbd5e1;
+  opacity: 0.75;
+}
+
+.cert-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.cert-card p {
+  margin: 8px 0 0;
+  color: #526071;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* ---------- 表单附加 ---------- */
+
+.field-grid.cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.check-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.check-row input {
+  width: auto;
+  min-height: auto;
+}
+
+.check-row span {
+  color: #526071;
+  font-size: 13px;
+}
+
+.sim-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px dashed var(--border);
+}
+
+.sim-row .check-row {
+  margin-top: 0;
+}
+
+.sim-row button {
+  padding: 0 12px;
+  font-size: 13px;
+}
+
+.hint {
+  color: #64748b;
+  margin: 0;
+}
+
+.bad-text {
+  color: #b91c1c;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.chips .chip-active {
+  background: var(--primary);
+  color: #ffffff;
+  border-color: var(--primary);
+}
+
+/* ---------- 音栓卡片 ---------- */
+
+.stop-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.stop-card {
+  border: 1px solid var(--border);
+  border-top: 4px solid var(--accent);
+  border-radius: 8px;
+  padding: 14px 16px;
+  background: #fbfdff;
+}
+
+.stop-card.pending {
+  border-top-color: #f59e0b;
+}
+
+.stop-card.recalc {
+  border-top-color: #0ea5e9;
+}
+
+.stop-meta {
+  margin: 8px 0;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.stop-nums {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px 12px;
+  font-size: 13px;
+  color: #526071;
+}
+
+.stop-nums b {
+  color: #172033;
+}
+
+.stop-reason {
+  margin: 10px 0 0;
+  font-size: 12px;
+  color: #854d0e;
+  line-height: 1.6;
+}
+
+/* ---------- 偏差表 ---------- */
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+th,
+td {
+  padding: 9px 10px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+
+th {
+  color: #64748b;
+  font-weight: 700;
+  background: #f8fafc;
+}
+
+.row-over td {
+  background: #fff7ed;
+}
+
+/* ---------- 报告 ---------- */
+
+.report-new {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.report-new button {
+  padding: 0 12px;
+  font-size: 13px;
+}
+
+.records h3 .badge {
+  margin-left: 10px;
+}
+
+.report-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.report-actions button {
+  padding: 0 14px;
+  min-height: 34px;
+  font-size: 13px;
+}
+
+.history {
+  margin-top: 10px;
+}
+
+.history summary {
+  cursor: pointer;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.history ul {
+  margin: 8px 0 0;
+  padding-left: 18px;
+  color: #526071;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/* ---------- 审计日志 ---------- */
+
+.audit-list {
+  display: grid;
+  gap: 8px;
+  max-height: 320px;
+  overflow-y: auto;
+}
+
+.audit-row {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #fbfdff;
+  font-size: 13px;
+}
+
+.audit-time {
+  color: #94a3b8;
+  white-space: nowrap;
+}
+
+@media (max-width: 1080px) {
+  .stop-grid,
+  .field-grid.cols-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .stop-grid,
+  .field-grid.cols-4 {
+    grid-template-columns: 1fr;
+  }
+
+  .banner {
+    flex-direction: column;
+    align-items: stretch;
   }
 }
